@@ -31,7 +31,7 @@ pipeline {
         }
         stage('Change directory') {
             steps {
-                dir("\"${env.WORKSPACE}\"/scripts"){
+                dir("${env.WORKSPACE}/scripts"){
                     sh("./fibonacci.sh ${env.NUMBER}")
                 }
             }
